@@ -1,0 +1,7 @@
+name: BugEyedBettys
+description: A sample web application
+dependencies:
+  angular: any
+  angular_dart_ui_bootstrap: any
+  angular_ui: any
+  browser: any
