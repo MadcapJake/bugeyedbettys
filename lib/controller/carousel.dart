@@ -1,4 +1,4 @@
-library carousel_controller;
+library bugeyedbettys.carousel_controller;
 
 import 'package:angular/angular.dart';
 import 'dart:html';
