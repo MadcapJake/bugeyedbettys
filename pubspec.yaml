@@ -5,3 +5,7 @@ dependencies:
   angular_dart_ui_bootstrap: any
   angular_ui: any
   browser: any
+transformers:
+- angular
+- $dart2js:
+    verbose: true

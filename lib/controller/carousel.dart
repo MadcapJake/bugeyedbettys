@@ -1,26 +1,11 @@
-import 'dart:html';
+library carousel_controller;
+
 import 'package:angular/angular.dart';
-import 'package:angular/application_factory.dart';
-import 'package:angular_ui/angular_ui.dart';
+import 'dart:html';
 import 'dart:convert';
 
-void main() {
-  applicationFactory()
-    .addModule(new MainModule())
-    .run();
-}
-
-class MainModule extends Module {
-  
-  MainModule() {
-    install(new AngularUIModule());
-    bind(CarouselController);
-  }
-  
-}
-
 @Controller(
-    selector: '[ng-controller=main-carousel]',
+    selector: '[main-carousel]',
     publishAs: 'ctrl')
 class CarouselController {
   
@@ -40,7 +25,7 @@ class CarouselController {
     
   }
   
-  void processString(String jsonString) =>
+  void processString(String jsonString) {
       slides = JSON.decode(jsonString);
-  
+  }
 }

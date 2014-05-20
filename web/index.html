@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 
-<html>
+<html ng-app>
   <head>
     <meta charset="utf-8">
     <title>Bug Eyed Betty's</title>
     <link rel="stylesheet" href="bugeyedbettys.css">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
   </head>
-  <body>
+  <body ng-cloak>
     <header>
-      <div id="header_logo"><img src="../assets/betty_web_logo.png"></div>
+      <div id="header_logo"><img src="image/betty_web_logo.png"></div>
       
       <div id="menu_bar">
         <div class="ribbon">
@@ -26,7 +26,7 @@
     <div id="containers">
     
       <div id="splash_banners_container">
-        <div ng-controller="main-carousel">
+        <div main-carousel>
           <carousel interval="5000">
             <slide ng-repeat="slide in ctrl.slides" active="slide['active']">
               <img ng-src="{{slide['image']}}" style="margin:auto;">
@@ -50,7 +50,8 @@
       
     </div>
 
-    <script type="application/dart" src="bugeyedbettys.dart"></script>
+    <script src="packages/shadow_dom/shadow_dom.min.js"></script>
+    <script type="application/dart" src="main.dart"></script>
     <script src="packages/browser/dart.js"></script>
   </body>
 </html>

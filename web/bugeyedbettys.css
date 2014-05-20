@@ -1,11 +1,11 @@
 @font-face {
   font-family: myCopasetic;
-  src: url('../assets/COPASETI.woff') format('woff'), 
-       url('../assets/COPASETI.TTF') format('truetype');
+  src: url('font/COPASETI.woff') format('woff'), 
+       url('font/COPASETI.TTF') format('truetype');
 }
 
 body {
-  background-image: url("../assets/wood_bg.jpg");
+  background-image: url("image/wood_bg.jpg");
   background-repeat: repeat;
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
