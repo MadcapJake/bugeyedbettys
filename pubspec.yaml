@@ -1,4 +1,4 @@
-name: BugEyedBettys
+name: bugeyedbettys
 description: A sample web application
 dependencies:
   angular: any

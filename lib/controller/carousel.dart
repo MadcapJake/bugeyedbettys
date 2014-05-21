@@ -1,4 +1,4 @@
-library bugeyedbettys.carousel_controller;
+library carousel_controller;
 
 import 'package:angular/angular.dart';
 import 'dart:html';
@@ -18,7 +18,7 @@ class CarouselController {
   }
   
   void makeSlideRequest() {
-    var url = "../lib/carousel_slides.json";
+    var url = "carousel_slides.json";
     HttpRequest.getString(url)
       .then(processString);
 //      .catchError(handleError);
