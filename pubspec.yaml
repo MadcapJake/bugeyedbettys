@@ -1,5 +1,6 @@
 name: bugeyedbettys
-description: A sample web application
+author: Jake Russo
+description: Bug Eyed Bettys Website
 dependencies:
   angular: any
   angular_dart_ui_bootstrap: any

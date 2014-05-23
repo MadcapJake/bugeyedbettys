@@ -54,7 +54,7 @@
     "desc": "Our gourmet burgers are made with fresh, <i>Certified Angus Beef&copyrt;</i> and are served on a fresh, grilled brioche bun with fries or tots.  Substitute garlic fries, sweet potato fries, onion rings, or Asian slaw for 1.50",
     "items": [
       {
-        "name": "Walk of Shame"
+        "name": "Walk of Shame",
         "desc": "Jalapeno jelly, peanut butter, bacon, and a fried egg",
         "cost": 9
       },
@@ -125,7 +125,7 @@
       },
       {
         "name": "Pork Belly Salad",
-        "desc": "Seared pork belly over mixed greens with pickled vegetables, fried wontons, and sesame soy ginger dressing"
+        "desc": "Seared pork belly over mixed greens with pickled vegetables, fried wontons, and sesame soy ginger dressing",
         "cost": 10
       }
     ]
