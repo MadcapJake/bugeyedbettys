@@ -1,7 +1,7 @@
 <div class="menu-category">
   <ul>
     <li ng-repeat="dish in cmp.dishList">
-      <menu-item dish-map="dish"></menu-item>
+      <menu-item name="dish.name" desc="dish.desc" cost="dish.cost"></menu-item>
     </li>
   </ul>
 </div>

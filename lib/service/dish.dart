@@ -1,7 +1,9 @@
 library dish;
 
 class Dish {
-  String name;
+  String _name;
+  String get name => _name;
+  void set name(n) { _name = n; }
   String desc;
   int cost;
 //  Ideas for later:
@@ -9,7 +11,7 @@ class Dish {
 //  String imgUrl;
 
 
-  Dish(this.name, this.desc, this.cost);
+  Dish(this._name, this.desc, this.cost);
   
 //  Map<String, dynamic> toJson() => <String, dynamic>{
 //    "name": name,
