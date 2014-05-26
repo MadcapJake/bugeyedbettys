@@ -6,6 +6,7 @@ dependencies:
   angular_dart_ui_bootstrap: any
   angular_ui: any
   browser: any
+  shadow_dom: any
 transformers:
 - angular:
     html_files:

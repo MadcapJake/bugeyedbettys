@@ -31,7 +31,8 @@ h1, p {
 }
 
 #splash_banners_container,
-.main_container {
+.main_container,
+.menu_container {
   width: 100%;
   position: relative;
   float: left;
@@ -55,8 +56,16 @@ h1, p {
   color: #a9c8ff;
 }
 
-.main_container {
+.main_container,
+.menu_container {
   margin-bottom: 4em;
+}
+
+.menu_container h3 {
+  margin-left: 1.25em;
+  font-family: myCopasetic, Verdana, sans-serif;
+  font-size: 2em;
+  letter-spacing: 2px;
 }
 
 #sample_text_id {

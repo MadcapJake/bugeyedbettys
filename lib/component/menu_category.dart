@@ -7,7 +7,9 @@ import 'package:bugeyedbettys/service/dish.dart';
 
 @Component(
     selector: 'menu-category',
-    templateUrl: '../lib/component/menu_category.html',
+    visibility: Directive.CHILDREN_VISIBILITY, 
+    templateUrl: 'packages/bugeyedbettys/component/menu_category.html',
+    cssUrl: 'packages/bugeyedbettys/component/menu.css',
     publishAs: 'cmp'
 )
 class MenuCategoryComponent {
