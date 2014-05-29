@@ -4,7 +4,8 @@ description: Bug Eyed Bettys Website
 dependencies:
   angular: any
   angular_dart_ui_bootstrap: any
-  angular_ui: any
+  angular_ui:
+    git: https://github.com/akserg/angular.dart.ui.git
   browser: any
   shadow_dom: any
 transformers:
