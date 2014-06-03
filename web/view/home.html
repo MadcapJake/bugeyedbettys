@@ -1,6 +1,7 @@
 <div id="splash_banners_container">
-  <!--div main-carousel>
-    <carousel interval="5000">
+  <!--div main-carousel-->
+  <!--div>
+    <carousel interval="3500" json-url="carousel_slides.json">
       <slide ng-repeat="slide in ctrl.slides" active="slide['active']">
         <img ng-src="{{slide['image']}}" style="margin:auto;">
         <div class="carousel-caption">
@@ -11,15 +12,7 @@
     </carousel>
   </div-->
   
-  <div carousel id="splash_banners_carousel">
-    <section ng-repeat="slide in ctrl.slides" ng-class="slide['active']">
-      <img ng-src="{{slide['image']}}" style="margin:auto;">
-      <div class="carousel-caption">
-        <h4>{{slide['title']}}</h4>
-        <p>{{slide['text']}}</p>
-      </div>
-    </section>
-  </div>
+  <carousel slide-interval="3500"></carousel>
 </div>
        
 <div class="main_container">

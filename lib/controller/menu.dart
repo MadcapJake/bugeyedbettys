@@ -1,10 +1,4 @@
-library menu_controller;
-
-import 'package:angular/angular.dart';
-import 'dart:async';
-
-//import 'package:bugeyedbettys/service/queryservice.dart';
-import 'package:bugeyedbettys/service/dish.dart';
+part of bugeyedbettys;
 
 @Controller(
     selector: '[menu]',

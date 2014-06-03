@@ -6,7 +6,7 @@ import 'dart:convert';
 import 'dart:async';
 
 @Controller(
-    selector: '[carousel]',
+    selector: '[main-carousel]',
     publishAs: 'ctrl')
 class CarouselController {
   
@@ -14,8 +14,8 @@ class CarouselController {
   
   // Carousel Processing
   
-  const TIMEOUT = const Duration(seconds: 3);
-  const ms = const Duration(milliseconds: 1);
+  static const TIMEOUT = const Duration(seconds: 3);
+  static const ms = const Duration(milliseconds: 1);
   
   Timer nextSlide;
   
@@ -24,32 +24,34 @@ class CarouselController {
   static const String LOADING_MESSAGE = "Folding table tents...";
   static const String ERROR_MESSAGE = "Sorry! The table tents are not folding well...";
   
-  final Http _http;
-  
   String message = LOADING_MESSAGE;
   bool carouselLoaded = false;
   
   // Query Return
   
-  List<Map<String, String>> carouselSlides;
+//  @NgOneWay('slides')
+  List<Map<String, String>> slides;
   
   // Functions
   
   // Constructor
   
   CarouselController() {
-    String url = "carousel_slides.json";
-    _http.get(url)
-      .then(processString);
     
-    nextSlide = startTimeout();
+    makeSlideRequest();
+    
+//    String url = "carousel_slides.json";
+//    _http.get(url)
+//      .then(processString);
+    
+//    nextSlide = startTimeout();
     
   }
   
-  // Query Function
+//// Query Function
   
   void makeSlideRequest() {
-    var url = 
+    var url = "carousel_slides.json";
     HttpRequest.getString(url)
       .then(processString);
 //      .catchError(handleError);
@@ -57,10 +59,10 @@ class CarouselController {
   }
   
   void processString(String jsonString) {
-      carouselSlides = JSON.decode(jsonString);
+      slides = JSON.decode(jsonString);
   }
   
-  // Carousel Functions
+//// Carousel Functions
   
   Timer startTimeout([int milliseconds]) {
     var duration = milliseconds == null ? TIMEOUT : ms * milliseconds;

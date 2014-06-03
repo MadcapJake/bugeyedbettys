@@ -1,9 +1,4 @@
-library menu_item_component;
-
-import 'package:angular/angular.dart';
-
-//import 'package:bugeyedbettys/lib/service/queryservice.dart';
-import 'package:bugeyedbettys/service/dish.dart';
+part of bugeyedbettys;
 
 @Component(
     selector: 'menu-item',

@@ -1,6 +1,4 @@
-library betty_router;
-
-import 'package:angular/angular.dart';
+part of bugeyedbettys;
 
 bettyRouteInitializer(Router router, RouteViewFactory views) {
   views.configure({
@@ -15,15 +13,15 @@ bettyRouteInitializer(Router router, RouteViewFactory views) {
         enter: views('view/taps.html')),
     'specials': ngRoute(
         path: '/specials',
-        enter: views('views/specials.html')),
+        enter: views('view/specials.html')),
     'gift-cards': ngRoute(
         path: '/gift-cards',
-        enter: views('views/gift-cards.html')),
+        enter: views('view/gift-cards.html')),
     'gallery': ngRoute(
         path: '/gallery',
-        enter: views('views/gallery.html')),
+        enter: views('view/gallery.html')),
     'about': ngRoute(
         path: '/about',
-        enter: views('views/about.html'))
+        enter: views('view/about.html'))
   });
 }

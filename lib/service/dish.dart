@@ -1,4 +1,4 @@
-library dish;
+part of bugeyedbettys;
 
 class Dish {
   String _name;
