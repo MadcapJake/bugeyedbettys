@@ -1,0 +1,9 @@
+li {
+  display: none;
+}
+
+/* overwrites li display style */
+.show {
+  display: block;
+}
+

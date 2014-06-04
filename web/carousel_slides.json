@@ -1,21 +1,21 @@
 [
 	{
-		"image": "../assets/slide1.png",
+		"image": "image/slide1.png",
 		"title": "Grand Opening!",
 		"text": "Come join us on 6/1/2014 for our grand opening!"
 	},
 	{
-		"image": "../assets/slide2.png",
+		"image": "image/slide2.png",
 		"title": "Wing Wednesdays!",
 		"text": "$.60 Camel wings. Boneless or traditional starting at 3pm"
 	},
 	{
-		"image": "../assets/slide3.png",
+		"image": "image/slide3.png",
 		"title": "Try the Walk of Shame",
 		"text": "Shamelessly delicious and you'll need a walk afterwards."
 	},
 	{
-    "image": "../assets/slide4.png",
+    "image": "image/slide4.png",
     "title": "Betty can bake!",
     "text": "Fresh French bread baked twice a day."
   }

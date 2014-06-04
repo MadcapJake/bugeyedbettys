@@ -1,0 +1,15 @@
+<div menu>
+  <div ng-switch="ctrl.menuLoaded">
+    <div ng-switch-when="false">
+      {{ctrl.message}}
+    </div>
+    <div class="menu_container" ng-switch-when="true">
+      <h3>Appetizers</h3>
+      <menu-category dish-list="ctrl.dishlist('Appetizers')" name="Appetizers"></menu-category>
+      <h3>Burgers</h3>
+      <menu-category dish-list="ctrl.dishlist('Burgers')" name="Burgers"></menu-category>
+      <h3>Salads</h3>
+      <menu-category dish-list="ctrl.dishlist('Salads')" name="Salads"></menu-category>
+    </div>
+  </div>
+</div>

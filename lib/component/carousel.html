@@ -1,0 +1,19 @@
+<ul class="carousel" 
+    ng-mouseenter='carousel.pause()' 
+    ng-mouseleave='carousel.play()'
+    style="list-style-type: none; 
+           margin-left: -2em;">
+  <li ng-repeat="slide in carousel.slides" 
+      ng-class="{ show: {{carousel.slides.indexOf(slide) == 0}} }" 
+      id="carousel.slides.indexOf(slide) + 1">
+    <img ng-src="{{slide['image']}}">
+    <div class="caption">
+      <h4>{{slide['title']}}</h4>
+      <p>{{slide['text']}}</p>
+    </div>
+  </li>
+</ul>
+<form>
+  <input type="button" value="Back" ng-click="carousel.prevSlide()"/>
+  <input type="button" value="Forward" ng-click="carousel.nextSlide()"/>
+</form>

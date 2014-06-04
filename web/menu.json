@@ -1,0 +1,133 @@
+[
+  {
+    "name": "Appetizers",
+    "items": [
+      {
+        "name": "Garlic Fries",
+        "desc": "House cut, skin on fries tossed in garlic sauce and served with a creamy, spcie red pepper aioli",
+        "cost": 6
+      },
+      {
+        "name": "Pizza Egg Rolls",
+        "desc": "Mozzarella, pepperoni, and sausage served with a side of our house made pizza sauce",
+        "cost": 7
+      },
+      {
+        "name": "Bacontaters",
+        "desc": "Brown sugar and cayenne pepper acanided bacon wrapped around classic America Tater Tots.  Served with spicy rasberry BBG sauce",
+        "cost": 8
+      },
+      {
+        "name": "Crab & Artichoke Dip",
+        "desc": "Artichoke and spinach dip with lump crab served hot with celery, pita toast points, and grilled crostini",
+        "cost": 12
+      },
+      {
+        "name": "Onion Rings",
+        "desc": "Thick cut, battered sweet onions deep-fried and served with our hickory maple BBG sauce",
+        "cost": 7
+      },
+      {
+        "name": "Beer & Pretzel Curds",
+        "desc": "From Ellsworth, WI, these curds are battered and deep fried and served with a side of spicy mayo for dipping",
+        "cost": 7
+      },
+      {
+        "name": "Bacon & Bleu Fries",
+        "desc": "Sweet potato waffle fries tossed inb garlic sauce then topped with bleu cheese, bacon, and scallions.  We serve them with a side of sriracha aioli for dipping",
+        "cost": 9
+      },
+      {
+        "name": "Quesadilla",
+        "desc": "Marinated grilled chicken, BBQ, bacon, and fresh apple slices with melted cheddar cheese",
+        "cost": 8
+      },
+      {
+        "name": "Nachos",
+        "desc": "Grilled BBQ chicken and sauteed kale topped with melted cheddar cheese and black bean corn salsa.  Served with salsa and sour cream",
+        "cost": 10
+      }
+    ]
+  },
+  {
+    "name": "Burgers",
+    "desc": "Our gourmet burgers are made with fresh, <i>Certified Angus Beef&copyrt;</i> and are served on a fresh, grilled brioche bun with fries or tots.  Substitute garlic fries, sweet potato fries, onion rings, or Asian slaw for 1.50",
+    "items": [
+      {
+        "name": "Walk of Shame",
+        "desc": "Jalapeno jelly, peanut butter, bacon, and a fried egg",
+        "cost": 9
+      },
+      {
+        "name": "Steakhouse",
+        "desc": "Caramelized onions, sauteed mushrooms and brown gravy",
+        "cost": 9
+      },
+      {
+        "name": "Blackened Bleu",
+        "desc": "Cajun seasoned and topped with bleu cheese, caramelized onions and creole sauce",
+        "cost": 9
+      },
+      {
+        "name": "Burger Mi",
+        "desc": "topped with seared pork belly, house made kimchi, sriracha aioli, and fresh cilantro",
+        "cost": 9
+      },
+      {
+        "name": "Sweaty Betty",
+        "desc": "Habenero jack cheese, candied jalapenos, peppered bacon, and sriracha aioli",
+        "cost": 10
+      },
+      {
+        "name": "Poutine Burger",
+        "desc": "Topped with house cut garlic fries, cheddar cheese, and brown gravy",
+        "cost": 8
+      },
+      {
+        "name": "Veggie Burger",
+        "desc": "Our quinoa and roasted black bean burger is topped with sundried tomato pesto and shredded kale",
+        "cost": 9
+      },
+      {
+        "name": "Signature Betty",
+        "desc": "Fresh apple slices, peppered bacon, caramelized onions, and Swiss cheese",
+        "cost": 10
+      },
+      {
+        "name": "Turkey Caprese",
+        "desc": "Our all natural turkey patty is topped with fresh mozzaraella, tomato, basil, and balsamic glaze",
+        "cost": 10
+      },
+      {
+        "name": "BYO Burger",
+        "desc": "Sub a veggie patty, turkey patty,or chicken breast for 1.  Lettuce, tomato, and onion free upon request. Add toppings for .75",
+        "cost": 7
+      }
+    ]
+  },
+  {
+    "name": "Salads",
+    "items": [
+      {
+        "name": "Chicken BLT Salad",
+        "desc": "Grilled chicken, bacon, tomato, and red pepper dressing over mixed greens",
+        "cost": 10
+      },
+      {
+        "name": "Southwest Salad",
+        "desc": "House roasted pork shoulder, black bean corn salsa over mixed greens with cheddar cheese topped with ranch dressing and BBQ",
+        "cost": 9
+      },
+      {
+        "name": "Chicken Caesar Salad",
+        "desc": "Grilled chicken, croutons, and shredded parmesan in Caesar dressing",
+        "cost": 9
+      },
+      {
+        "name": "Pork Belly Salad",
+        "desc": "Seared pork belly over mixed greens with pickled vegetables, fried wontons, and sesame soy ginger dressing",
+        "cost": 10
+      }
+    ]
+  }
+]
