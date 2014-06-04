@@ -4,11 +4,11 @@ final _log = new Logger('carousel_component');
 
 @Component(
     selector: 'carousel',
-    visibility: Directive.CHILDREN_VISIBILITY, 
+//    visibility: Directive.CHILDREN_VISIBILITY, 
     templateUrl: 'packages/bugeyedbettys/component/carousel.html',
     cssUrl: 'packages/bugeyedbettys/component/carousel.css',
-    publishAs: 'cmp')
-class CarouselComponent extends ShadowRootAware{
+    publishAs: 'carousel')
+class CarouselComponent {
   //// Variables
   
   //// - Input/Bindings
@@ -42,31 +42,38 @@ class CarouselComponent extends ShadowRootAware{
   List<Map<String, String>> get slides => _slides;
   void set slides(var s) { 
     _slides = JSON.decode(s);
+    _log.fine("JSON decoded and slides set");
+    _log.fine(s.toString());
   }
   
   //// Constructor
   
   CarouselComponent() {
-    _log.fine("CarouselComponent");
+    _log.fine("CarouselComponent initializing...");
     getSlides(jsonUrl);
+    
     slideTimer = startTimeout();
   }
   
   //// Functions
   
   void getSlides(String slidesUrl) {
+    _log.fine("Getting slides...");
     HttpRequest.getString(slidesUrl)
-      .then(slides)
+      .then((slds) {
+        slides = slds;
+        _log.fine("Slides set");
+    })
       .catchError((_) { message = ERROR_MESSAGE; });
   }
   
   void toggleSlide(bool left) {
-    _log.fine("Toggling slides");
-    LIElement visibleItem = htmlSlides.querySelector(".show");
+    _log.fine("Toggling slides...");
+    LIElement visibleItem = querySelector(".show");
     _log.fine(visibleItem);
     visibleItem.classes.remove("show");
     int direction = left == true ? -1 : 1;
-    LIElement makeVisible = htmlSlides.querySelector("#" + (int.parse(visibleElem.id) + direction).toString());
+    LIElement makeVisible = querySelector("#" + (int.parse(visibleElem.id) + direction).toString());
     makeVisible.classes.add("show");
   }
   
@@ -96,10 +103,10 @@ class CarouselComponent extends ShadowRootAware{
   }
   
   // ShadowRootAware Implementation
-  @override
-  void onShadowRoot(ShadowRoot shadowRoot) {
-    htmlSlides = shadowRoot.querySelector('.carousel'); 
-  }
+//  @override
+//  void onShadowRoot(ShadowRoot shadowRoot) {
+//    htmlSlides = shadowRoot.querySelector('.carousel'); 
+//  }
 }
 
 
