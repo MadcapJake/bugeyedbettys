@@ -24,11 +24,12 @@ import 'dart:mirrors';
 //import 'package:bugeyedbettys/component/menu_category.dart';
 //import 'package:bugeyedbettys/component/menu_item.dart';
 
-part '../lib/component/carousel.dart';
+//part '../lib/component/carousel.dart';
 part '../lib/component/menu_category.dart';
 part '../lib/component/menu_item.dart';
 
 part '../lib/controller/menu.dart';
+part '../lib/controller/carousel.dart';
 
 part '../lib/routing/betty_router.dart';
 
@@ -39,14 +40,14 @@ class MainModule extends Module {
   MainModule() {
 //    install(new AngularUIModule());
     // Controllers
-//    bind(CarouselController);
+    bind(CarouselController);
     bind(MenuController);
     
     // Services
 //    bind(QueryService);
     
     // Components
-    bind(CarouselComponent);
+//    bind(CarouselComponent);
     bind(MenuCategoryComponent);
     bind(MenuItemComponent);
     

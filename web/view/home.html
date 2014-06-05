@@ -12,7 +12,27 @@
     </carousel>
   </div-->
   
-  <carousel slide-interval="3500"></carousel>
+  <!--carousel slide-interval="3500"></carousel-->
+  
+  <!-- Moving carousel component logic to controller and placing html here-->
+  <div carousel class="bbb-carousel">
+    <ul ng-mouseenter='ctrl.pauseslides()' 
+        ng-mouseleave='ctrl.playslides()'
+        style="list-style-type: none; 
+               margin-left: -2em;">
+      <li ng-repeat="slide in ctrl.slides" 
+          ng-class="{ 'show': ctrl.isfirstslide(slide) }" 
+          id="slide{{ctrl.slides.indexOf(slide) + 1}}">
+        <img ng-src="{{slide['image']}}">
+        <div class="caption">
+          <h4>{{slide['title']}}</h4>
+          <p>{{slide['text']}}</p>
+        </div>
+      </li>
+    </ul>
+    <input type="button" value="Back" ng-click="ctrl.prevslide()"/>
+    <input type="button" value="Forward" ng-click="ctrl.nextslide()"/>
+  </div>
 </div>
        
 <div class="main_container">

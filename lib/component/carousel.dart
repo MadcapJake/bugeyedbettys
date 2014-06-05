@@ -4,7 +4,6 @@ final _log = new Logger('carousel_component');
 
 @Component(
     selector: 'carousel',
-//    visibility: Directive.CHILDREN_VISIBILITY, 
     templateUrl: 'packages/bugeyedbettys/component/carousel.html',
     cssUrl: 'packages/bugeyedbettys/component/carousel.css',
     publishAs: 'carousel')
@@ -24,12 +23,12 @@ class CarouselComponent {
   
   //// - Processing
   
-  static const String LOADING_MESSAGE = "Folding table tents...";
-  static const String ERROR_MESSAGE = "Sorry! The table tents are not folding well...";
+//  static const String LOADING_MESSAGE = "Folding table tents...";
+//  static const String ERROR_MESSAGE = "Sorry! The table tents are not folding well...";
+//  
+//  String message = LOADING_MESSAGE;
   
-  String message = LOADING_MESSAGE;
-  
-  bool carouselLoaded = false;
+//  bool carouselLoaded = false;
   
 //  static const TIMEOUT = const Duration(seconds: 3);
   static const ms = const Duration(milliseconds: 1);
@@ -69,7 +68,7 @@ class CarouselComponent {
   
   void toggleSlide(bool left) {
     _log.fine("Toggling slides...");
-    LIElement visibleItem = querySelector(".show");
+    LIElement visibleItem = element.querySelector(".show");
     _log.fine(visibleItem);
     visibleItem.classes.remove("show");
     int direction = left == true ? -1 : 1;
@@ -77,12 +76,16 @@ class CarouselComponent {
     makeVisible.classes.add("show");
   }
   
-  void nextSlide() {
-    toggleSlide(false);
+  void playslides() {
+    slideTimer = startTimeout();
   }
   
-  void prevSlide() {
-    toggleSlide(true);
+  void next() { toggleSlide(false); }
+  
+  void prev() { toggleSlide(true); }
+    
+  void pauseslides() {
+      slideTimer.cancel();
   }
   
   Timer startTimeout() {
@@ -91,16 +94,10 @@ class CarouselComponent {
   }
     
   void handleTimeout() {
-    nextSlide();
+    next();
   }
   
-  void play() {
-    slideTimer = startTimeout();
-  }
   
-  void pause() {
-    slideTimer.cancel();
-  }
   
   // ShadowRootAware Implementation
 //  @override

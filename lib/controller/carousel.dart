@@ -1,23 +1,26 @@
-library carousel_controller;
+part of bugeyedbettys;
 
-import 'package:angular/angular.dart';
-import 'dart:html';
-import 'dart:convert';
-import 'dart:async';
+final _log = new Logger('carousel_component');
 
 @Controller(
-    selector: '[main-carousel]',
+    selector: '[carousel]',
     publishAs: 'ctrl')
 class CarouselController {
   
   // Variables
+  
+  String jsonUrl = "carousel_slides.json";
+  
+  int _slideInterval = 3500;
+  
+  String enabled = "show";
   
   // Carousel Processing
   
   static const TIMEOUT = const Duration(seconds: 3);
   static const ms = const Duration(milliseconds: 1);
   
-  Timer nextSlide;
+  Timer slideTimer;
   
   // Query Processing
   
@@ -29,20 +32,21 @@ class CarouselController {
   
   // Query Return
   
-//  @NgOneWay('slides')
-  List<Map<String, String>> slides;
+  List<Map<String, String>> _slides;
+  List<Map<String, String>> get slides => _slides;
+  void set slides(var s) { 
+    _slides = JSON.decode(s);
+    _log.fine("JSON decoded and slides set");
+    _log.fine(s.toString());
+  }
   
-  // Functions
+  //// Functions
   
   // Constructor
   
   CarouselController() {
-    
+    _log.fine("CarouselController initializing...");
     makeSlideRequest();
-    
-//    String url = "carousel_slides.json";
-//    _http.get(url)
-//      .then(processString);
     
 //    nextSlide = startTimeout();
     
@@ -52,25 +56,74 @@ class CarouselController {
   
   void makeSlideRequest() {
     var url = "carousel_slides.json";
+    _log.fine("Getting slides...");
     HttpRequest.getString(url)
-      .then(processString);
-//      .catchError(handleError);
-    
-  }
-  
-  void processString(String jsonString) {
-      slides = JSON.decode(jsonString);
+      .then((slds) {
+        slides = slds;
+        _log.fine("Slides set");
+      })
+      .catchError((_) {
+        message = ERROR_MESSAGE; 
+      });
   }
   
 //// Carousel Functions
   
-  Timer startTimeout([int milliseconds]) {
-    var duration = milliseconds == null ? TIMEOUT : ms * milliseconds;
-    return new Timer(duration, handleTimeout);
+  void toggleSlide(bool left) {
+      _log.fine("-Toggling slides...");
+      LIElement visibleItem = querySelector(".show");
+      _log.fine("-visibleItem nodeName is: " + visibleItem.nodeName);
+      visibleItem.classes.remove("show");
+      visibleItem.hidden = true;
+      _log.fine("-visibleItem's classes after removal: " + visibleItem.className);
+      
+      int direction = left == true ? -1 : 1;
+      LIElement makeVisible = 
+          querySelector( idRotate(visibleItem.id, direction) );
+      _log.fine("-makeVisible's nodeName is: " + makeVisible.nodeName);
+      makeVisible.classes.add("show");
+      makeVisible.hidden = false;
+    }
+  
+  String idRotate(String id, int direction) {
+    _log.fine("--Rotating id number...");
+    _log.fine("--String id param is: " + id);
+    int idNum = int.parse( id.substring(5) );
+    _log.fine("--Current idNum is: " + idNum.toString());
+    int nextNum = idNum + direction;
+    if (nextNum > slides.length) {
+      return "#slide1";
+    } else if (nextNum < 1) {
+      return "#slide" + slides.length.toString();
+    } else {
+      return "#slide" + nextNum.toString();
+    }
   }
   
-  void handleTimeout() {
-    showNext();
+  void nextslide() {
+    toggleSlide(false);
+  }
+  
+  void prevslide() {
+    toggleSlide(true);
+  }
+  
+  Timer startTimeout() {
+    Duration d = new Duration(milliseconds: _slideInterval);
+    return new Timer(d, handleTimeout);
   }
     
+  void handleTimeout() {
+    nextslide();
+  }
+  
+  void playslides() {
+    slideTimer = startTimeout();
+  }
+  
+  void pauseslides() {
+    slideTimer.cancel();
+  }
+  
+  bool isfirstslide(slide) => slides.indexOf(slide) == 0;
 }
