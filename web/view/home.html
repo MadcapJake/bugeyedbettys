@@ -15,23 +15,37 @@
   <!--carousel slide-interval="3500"></carousel-->
   
   <!-- Moving carousel component logic to controller and placing html here-->
-  <div carousel class="bbb-carousel">
-    <ul ng-mouseenter='ctrl.pauseslides()' 
-        ng-mouseleave='ctrl.playslides()'
-        style="list-style-type: none; 
-               margin-left: -2em;">
-      <li ng-repeat="slide in ctrl.slides" 
-          ng-class="{ 'show': ctrl.isfirstslide(slide) }" 
-          id="slide{{ctrl.slides.indexOf(slide) + 1}}">
-        <img ng-src="{{slide['image']}}">
-        <div class="caption">
-          <h4>{{slide['title']}}</h4>
-          <p>{{slide['text']}}</p>
+  <div carousel ng-switch="ctrl.loading">
+    <div ng-switch-when="true">
+      <img id="carousel-loading-image" src="/bugeyedbettys/web/image/ajax-loader.gif" alt="ajax loading animation image">
+    </div>
+    <div ng-switch-when="false">
+      <div ng-switch="ctrl.loaded">
+        <div ng-switch-when="true">
+          <div class="bbb-carousel">
+            <ul ng-mouseenter='ctrl.pauseslides()' 
+                ng-mouseleave='ctrl.playslides()'
+                style="list-style-type: none; 
+                       margin-left: -2em;">
+              <li ng-repeat="slide in ctrl.slides" 
+                  ng-class="{ 'show': ctrl.isfirstslide(slide) }" 
+                  id="slide{{ctrl.slides.indexOf(slide) + 1}}">
+                <img ng-src="{{slide['image']}}">
+                <div class="caption">
+                  <h4>{{slide['title']}}</h4>
+                  <p>{{slide['text']}}</p>
+                </div>
+              </li>
+            </ul>
+            <input type="button" value="Back" ng-click="ctrl.prevslide()"/>
+            <input type="button" value="Forward" ng-click="ctrl.nextslide()"/>
+          </div>
         </div>
-      </li>
-    </ul>
-    <input type="button" value="Back" ng-click="ctrl.prevslide()"/>
-    <input type="button" value="Forward" ng-click="ctrl.nextslide()"/>
+        <div ng-switch-when="false">
+          {{ctrl.message}}
+        </div>
+      </div>
+    </div>
   </div>
 </div>
        

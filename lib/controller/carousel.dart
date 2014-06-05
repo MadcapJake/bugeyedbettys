@@ -28,7 +28,8 @@ class CarouselController {
   static const String ERROR_MESSAGE = "Sorry! The table tents are not folding well...";
   
   String message = LOADING_MESSAGE;
-  bool carouselLoaded = false;
+  bool loading = true;
+  bool loaded = false;
   
   // Query Return
   
@@ -47,9 +48,7 @@ class CarouselController {
   CarouselController() {
     _log.fine("CarouselController initializing...");
     makeSlideRequest();
-    
-//    nextSlide = startTimeout();
-    
+    slideTimer = startTimeout();
   }
   
 //// Query Function
@@ -61,9 +60,13 @@ class CarouselController {
       .then((slds) {
         slides = slds;
         _log.fine("Slides set");
+        loading = false;
+        loaded = true;
       })
       .catchError((_) {
         message = ERROR_MESSAGE; 
+        loading = false;
+        loaded = false;
       });
   }
   
