@@ -15,6 +15,11 @@ transformers:
       - lib/component/menu_item.html
       - web/view/home.html
       - web/view/menu.html
+      - web/view/about.html
+      - web/view/gallery.html
+      - web/view/gift-cards.html
+      - web/view/specials.html
+      - web/view/drinks.html
 - $dart2js:
     verbose: true
 

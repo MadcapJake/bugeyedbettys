@@ -2,7 +2,6 @@ library bugeyedbettys;
 
 import 'package:angular/angular.dart';
 import 'package:angular/application_factory.dart';
-//import 'package:angular_ui/angular_ui.dart';
 import 'package:logging/logging.dart';
 
 import 'dart:html';
@@ -12,7 +11,11 @@ import 'dart:async';
 import 'package:logging/logging.dart' show Logger;
 
 @MirrorsUsed(
-    targets: const ['menu_controller', 'carousel_component', 'betty_router', 'menu_category_component', 'menu_item_component'],
+    targets: const ['menu_controller', 
+                    'carousel_controller', 
+                    'betty_router', 
+                    'menu_category_component', 
+                    'menu_item_component'],
     override: '*')
 import 'dart:mirrors';
 

@@ -9,8 +9,8 @@ bettyRouteInitializer(Router router, RouteViewFactory views) {
         path: '/menu',
         enter: views('view/menu.html')),
     'taps': ngRoute(
-        path: '/taps',
-        enter: views('view/taps.html')),
+        path: '/drinks',
+        enter: views('view/drinks.html')),
     'specials': ngRoute(
         path: '/specials',
         enter: views('view/specials.html')),

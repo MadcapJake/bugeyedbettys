@@ -13,6 +13,6 @@ class MenuCategoryComponent {
   String name;
   
   @NgOneWay('dish-list')
-  List<String, Dish> dishList;
+  List<Dish> dishlist;
    
 }

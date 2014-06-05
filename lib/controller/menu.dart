@@ -82,7 +82,7 @@ class MenuController {
           });
     }
   
-  List<String, Dish> dishlist(name) =>
+  List<Dish> dishlist(name) =>
     menu.lastWhere((cat) => name == cat['name'])['items'];
   
 }

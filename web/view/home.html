@@ -16,7 +16,7 @@
   
   <!-- Moving carousel component logic to controller and placing html here-->
   <div carousel ng-switch="ctrl.loading">
-    <div ng-switch-when="true">
+    <div ng-switch-when="true" id="carousel-loading-space">
       <img id="carousel-loading-image" src="/bugeyedbettys/web/image/ajax-loader.gif" alt="ajax loading animation image">
     </div>
     <div ng-switch-when="false">
@@ -28,11 +28,12 @@
                 style="list-style-type: none; 
                        margin-left: -2em;">
               <li ng-repeat="slide in ctrl.slides" 
-                  ng-class="{ 'show': ctrl.isfirstslide(slide) }" 
+                  ng-class="{ 'show' : ctrl.isfirstslide(slide),
+                              'slide': true }" 
                   id="slide{{ctrl.slides.indexOf(slide) + 1}}">
                 <img ng-src="{{slide['image']}}">
                 <div class="caption">
-                  <h4>{{slide['title']}}</h4>
+                  <h3>{{slide['title']}}</h3>
                   <p>{{slide['text']}}</p>
                 </div>
               </li>
@@ -50,6 +51,7 @@
 </div>
        
 <div class="main_container">
+  <p>A new American Bar & Restaurant in Eau Claire dedicated to giving you something different!</p>
   <hr class="style-eight">
   <h2>You'll go bug-eyed over our menu!</h2>
   <h3>American cuisine with more twists than Twin Peaks!</h3>
