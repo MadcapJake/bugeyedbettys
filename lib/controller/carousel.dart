@@ -73,8 +73,11 @@ class CarouselController {
 //// Carousel Functions
   
   void toggleSlide(bool left) {
-      _log.fine("-Toggling slides...");
-      LIElement visibleItem = querySelector(".show");
+    _log.fine("-Toggling slides...");
+    LIElement visibleItem = querySelector(".show");
+    if (visibleItem == null) {
+      _log.fine("-Home view not active, visibleItem is null");
+    } else {
       _log.fine("-visibleItem nodeName is: " + visibleItem.nodeName);
       visibleItem.classes.remove("show");
       visibleItem.hidden = true;
@@ -87,6 +90,7 @@ class CarouselController {
       makeVisible.classes.add("show");
       makeVisible.hidden = false;
     }
+  }
   
   String idRotate(String id, int direction) {
     _log.fine("--Rotating id number...");

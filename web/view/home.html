@@ -17,7 +17,7 @@
   <!-- Moving carousel component logic to controller and placing html here-->
   <div carousel ng-switch="ctrl.loading">
     <div ng-switch-when="true" id="carousel-loading-space">
-      <img id="carousel-loading-image" src="/bugeyedbettys/web/image/ajax-loader.gif" alt="ajax loading animation image">
+      <img id="carousel-loading-image" src="image/ajax-loader.gif" alt="ajax loading animation image">
     </div>
     <div ng-switch-when="false">
       <div ng-switch="ctrl.loaded">
@@ -38,8 +38,14 @@
                 </div>
               </li>
             </ul>
-            <input type="button" value="Back" ng-click="ctrl.prevslide()"/>
-            <input type="button" value="Forward" ng-click="ctrl.nextslide()"/>
+            <section id="carousel-nav">
+              <button href="" ng-click="ctrl.prevslide()">
+                <img src="image/chevron-left-lg.svg">
+              </button>
+              <button href="" ng-click="ctrl.nextslide()">
+                <img src="image/chevron-right-lg.svg">
+              </button>
+            </section>
           </div>
         </div>
         <div ng-switch-when="false">
@@ -51,10 +57,36 @@
 </div>
        
 <div class="main_container">
-  <p>A new American Bar & Restaurant in Eau Claire dedicated to giving you something different!</p>
-  <hr class="style-eight">
-  <h2>You'll go bug-eyed over our menu!</h2>
-  <h3>American cuisine with more twists than Twin Peaks!</h3>
-  <p>Come in for our delicious dishes that really change what you think when you think "American cuisine".  You'll never go back.</p>
-  <hr class="style-eight">
+  <h2>A Bug Eyed Take On The Classics</h2>
+  <p>A new American Bar & Restaurant in Eau Claire dedicated to giving you something 
+    different! Whether it's a new take on a classic drink or a zesty new way of 
+    looking at pizzas or sandwhiches, you'll find something to satiate your palette 
+    and your curiosity.  Tradition tuned up a notch! Classics clarified.  Favorites 
+    flavorized.  You get the drill.  Get over to Bug Eyed Betty's and try for yourself!</p>
+  <p>Bug Eyed Bettys is a new locally owned and operated restaurant in the Eau Claire 
+    area.  We opened in the summer of 2014 and we are working hard to establish 
+    ourselves as a fixture in the vibrant Eau Claire restaurant scene.</p>
+  <!--hr class="style-eight"-->
+  <section id="hours">
+    <h2>Hours of Operation</h2>
+    <hr class="style-eight">
+    <p>
+      <strong>Pizza and Salad Bar:</strong> 11:00am - 2:00pm<br/>
+      <strong>Monday - Thursday:</strong> 11:00am - 12:00am<br/>
+      <strong>Friday - Saturday:</strong> 11:00am - 2:00am<br/>
+      <strong>Sunday: </strong> 11:00am - 12:00am<br/>
+    </p>
+  </section>
+  <section id="news">
+    <h2>Extra! Extra!</h2>
+    <hr class="style-eight">
+    <p>Just opened for business in May, come check us out or take a loot at our 
+      specials page for all the great deals we're offering and when!</p>
+  </section>
+  <section id="happy hour">
+    <h2>Happpy Halfy Hour!</h2>
+    <hr class="style-eight">
+    <p>Come down between xx:00pm and xx:00pm for half off appetizers and drinks!</p>
+  </section>
+  
 </div>

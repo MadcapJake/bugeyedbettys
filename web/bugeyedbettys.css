@@ -54,11 +54,36 @@ h1, p {
   margin-bottom: 4em;
 }
 
+.main_container h2{
+  padding: 1em 1.5em;
+}
+
+.main_container h3{
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.main_container p{
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-bottom: 1em;
+}
+
 .menu_container h3 {
   margin-left: 1.25em;
   font-family: myCopasetic, Verdana, sans-serif;
   font-size: 2em;
   letter-spacing: 2px;
+}
+
+.main_container section {
+  float: left;
+  height: 300px;
+  width: 400px;
+}
+
+.main_container section:nth-of-type(1) {
+  margin-left: 1em;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -178,8 +203,8 @@ hr.style-eight:after {
 
 .bbb-carousel .caption {
   position: absolute;
-  top: 200px;
-  left: 50px;
+  top: 250px;
+  left: 200px;
   letter-spacing: .2em;
 }
 
@@ -202,6 +227,21 @@ hr.style-eight:after {
   height: 400px;
 }
 
+#carousel-nav {
+  position: absolute;
+  top: 150px;
+}
+
+#carousel-nav button {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+#carousel-nav button:nth-of-type(2) {
+  margin-left: 930px;
+}
+
 /* -------------------------------------------------------------------------- */
 
 /* bootstrap dart port req */
@@ -210,3 +250,5 @@ hr.style-eight:after {
 .carousel, 
 .panel-title a {
   cursor: pointer; }
+  
+/* -------------------------------------------------------------------------- */
