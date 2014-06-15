@@ -4,6 +4,11 @@
        url('font/COPASETI.TTF') format('truetype');
 }
 
+@font-face {
+  font-family: jimThorpe;
+  src: url('font/JIMTH___.TTF');
+}
+
 body {
   background-image: url("image/wood_bg.jpg");
   background-repeat: repeat;
@@ -23,6 +28,21 @@ header img {
 
 h1, p {
   color: #333;
+}
+
+h1 {
+  font-family: jimThorpe, Verdana, serif;
+}
+
+h2 {
+  font-family: myCopasetic, Gadget, Serif;
+}
+
+h3 {
+  font-family: Impact, Charcoal, sans-serif;
+  font-size: 2em;
+  font-weight: lighter;
+  letter-spacing: 0.04em;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -50,12 +70,24 @@ h1, p {
 
 .main_container,
 .menu_container {
-  width: 100.6%;
+  width: 1200px;
   margin-bottom: 4em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 2em;
+}
+
+.main_container h1 {
+  font-size: 2.5em;
+  margin-left: 30px;
+  padding-top: 1em;
+  letter-spacing: 0.03em;
 }
 
 .main_container h2{
-  padding: 1em 1.5em;
+  margin-left: 30px;
+  font-size: 1.7em;
+  padding-top: 1em;
 }
 
 .main_container h3{
@@ -64,7 +96,7 @@ h1, p {
 }
 
 .main_container p{
-  padding-left: 2em;
+  margin-left: 30px;
   padding-right: 2em;
   padding-bottom: 1em;
 }
@@ -78,12 +110,21 @@ h1, p {
 
 .main_container section {
   float: left;
-  height: 300px;
-  width: 400px;
+  height: auto;
+  width: 32%;
 }
 
 .main_container section:nth-of-type(1) {
   margin-left: 1em;
+}
+
+.main_container #pizza_and_salad_bar img {
+  display: block;
+  margin: auto;
+}
+
+.main_container .hours_of_op {
+  line-height: 3em;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -125,7 +166,7 @@ h1, p {
 }
 
 .ribbon span {
-  font-family: myCopasetic;
+  font-family: myCopasetic, Gadget, Serif;
   font-size: 2em; /* default: 1em */
   background:#fff;
   display:inline-block;
@@ -203,23 +244,31 @@ hr.style-eight:after {
 
 .bbb-carousel .caption {
   position: absolute;
-  top: 250px;
-  left: 200px;
-  letter-spacing: .2em;
+  top: 230px;
+  left: 160px;
+  /*letter-spacing: .1em;*/
+  line-height: 0.2em;
+  background-color:white;
+  box-shadow: 5px 5px 10px Black;
+  padding: 1em;
 }
 
 .bbb-carousel .slide {
   transition: opacity
 }
 
-.bbb-carousel .caption h3 {
-  font-family: myCopasetic, Verdana, sans-serif;
-  font-size: 3em;
+
+
+.bbb-carousel .caption h1 {
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+  font-weight: lighter;
+  font-size: 4em;
 }
 
-.bbb-carousel .caption p {
-  font-size: 1.5em;
+.bbb-carousel .caption h3 {
   color: #a9c8ff;
+  margin-left: 1em;
 }
 
 #carousel-loading-space {
@@ -252,3 +301,58 @@ hr.style-eight:after {
   cursor: pointer; }
   
 /* -------------------------------------------------------------------------- */
+
+table {
+  margin: 2em 2em 4em 1em;
+  border-collapse: collapse;
+}
+
+table caption {
+  margin-bottom: 1em;
+}
+
+table th, table td {
+  width: 14%;
+  padding: 0 1em;
+}
+
+table thead tr{
+  height: 4em;
+}
+
+table h1 {
+  font-size: 1.5em !important;
+  margin-left: 0 !important;
+}
+
+table h3 {
+  font-size: 1.5em;
+  margin-left: 0;
+  margin-right: 0;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  line-height: 1em;
+}
+
+table tbody td {
+  text-align: center;
+}
+
+table tfoot td {
+  padding-bottom: 2em;
+}
+
+table td {
+  padding-top: 1em;
+  vertical-align: top;
+}
+
+col {
+}
+
+col.current {
+  background: #a9c8ff;
+  width: 16%;
+}

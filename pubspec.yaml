@@ -3,9 +3,6 @@ author: Jake Russo
 description: Bug Eyed Bettys Website
 dependencies:
   angular: any
-  angular_dart_ui_bootstrap: any
-  angular_ui:
-    git: https://github.com/akserg/angular.dart.ui.git
   browser: any
   shadow_dom: any
 transformers:
@@ -21,5 +18,5 @@ transformers:
       - web/view/specials.html
       - web/view/drinks.html
 - $dart2js:
-    verbose: true
+    minify: true
 

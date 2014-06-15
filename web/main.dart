@@ -10,14 +10,14 @@ import 'dart:async';
 
 import 'package:logging/logging.dart' show Logger;
 
-@MirrorsUsed(
-    targets: const ['menu_controller', 
-                    'carousel_controller', 
-                    'betty_router', 
-                    'menu_category_component', 
-                    'menu_item_component'],
-    override: '*')
-import 'dart:mirrors';
+//@MirrorsUsed(
+//    targets: const ['menu_controller', 
+//                    'carousel_controller', 
+//                    'betty_router', 
+//                    'menu_category_component', 
+//                    'menu_item_component'],
+//    override: '*')
+//import 'dart:mirrors';
 
 //import 'package:bugeyedbettys/controller/carousel.dart';
 //import 'package:bugeyedbettys/controller/menu.dart';
@@ -33,6 +33,7 @@ part '../lib/component/menu_item.dart';
 
 part '../lib/controller/menu.dart';
 part '../lib/controller/carousel.dart';
+part '../lib/controller/specials.dart';
 
 part '../lib/routing/betty_router.dart';
 
@@ -45,6 +46,7 @@ class MainModule extends Module {
     // Controllers
     bind(CarouselController);
     bind(MenuController);
+    bind(SpecialsController);
     
     // Services
 //    bind(QueryService);

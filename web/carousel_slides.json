@@ -1,22 +1,22 @@
 [
 	{
 		"image": "image/slide1.png",
-		"title": "Grand Opening!",
-		"text": "Come join us on 6/1/2014 for our grand opening!"
+		"title": "betty's in TOWN",
+		"text": "Bug eyed place, bug eyed dishes, and bug eyed fun!"
 	},
 	{
 		"image": "image/slide2.png",
-		"title": "Wing Wednesdays!",
-		"text": "$.60 Camel wings. Boneless or traditional starting at 3pm"
+		"title": "wing WEDNESDAY",
+		"text": "60¢ boneless or traditional wings starting at 3pm"
 	},
 	{
 		"image": "image/slide3.png",
-		"title": "Try the Walk of Shame",
-		"text": "Shamelessly delicious and you'll need a walk afterwards."
+		"title": "betty's FISH FRY",
+		"text": "Flaky, crispy, breaded cod; every Friday at 4pm"
 	},
 	{
     "image": "image/slide4.png",
-    "title": "Betty can bake!",
+    "title": "BETTY can BAKE!",
     "text": "Fresh French bread baked twice a day."
   }
 ]

@@ -1,41 +1,75 @@
-<div class="main_container">
+<div class="main_container specials" specials>
   <table id="specials_table">
+    <colgroup>
+      <col ng-class="{ 'current': ctrl.todayis('mon') }">
+      <col ng-class="{ 'current': ctrl.todayis('tue') }">
+      <col ng-class="{ 'current': ctrl.todayis('wed') }">
+      <col ng-class="{ 'current': ctrl.todayis('thu') }">
+      <col ng-class="{ 'current': ctrl.todayis('fri') }">
+      <col ng-class="{ 'current': ctrl.todayis('sat') }">
+      <col ng-class="{ 'current': ctrl.todayis('sun') }">
+    </colgroup>
     <caption>
       Here are our current grand opening daily specials.  Lots of great deals here so get over
       to Bug Eyed Betty's while they last!
     </caption>
     <thead>
       <tr>
-        <th>Monday</th>
-        <th>Tuesday</th>
-        <th>Wednesday</th>
-        <th>Thursday</th>
-        <th>Friday</th>
-        <th>Saturday</th>
-        <th>Sunday</th>
+        <th><h1>MONDAY</h1></th>
+        <th><h1>tuesday</h1></th>
+        <th><h1>WEDNESDAY</h1></th>
+        <th><h1>thursday</h1></th>
+        <th><h1>FRIDAY</h1></th>
+        <th><h1>saturday</h1></th>
+        <th><h1>SUNDAY</h1></th>
       </tr>
     </thead>
-    <tbody>
-      <tr>
-        <td>Buy 1 Meal Get 1 Meal Half price!</td>
-        <td>Buy 1 Meal Get 1 Meal Half price!</td>
-        <td>Buy 1 Meal Get 1 Meal Half price!</td>
-        <td>Buy 1 Meal Get 1 Meal Half price!</td>
-        <td>Buy 1 Meal Get 1 Meal Half price!</td>
-        <td>Buy 1 Meal Get 1 Meal Half price!</td>
-        <td>Buy 1 Meal Get 1 Meal Half price!</td>
-      </tr>
-    </tbody>
     <tfoot>
       <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <!-- Monday -->
+        <td>
+          $5 For Any Burger All Day Monday and wash it down with $1.50 pints!
+        </td>
+        <!-- Tuesday -->
+        <td>
+          Medium any-topping or speciality pizza for $10 and share a $6 pitcher 
+          (or eat and drink alone, Betty wont' mind!)
+        </td>
+        <!-- Wednesday -->
+        <td>
+          $0.60 Wings (boneless or traditional)<br>-$3 for 5 <br>-$6 for 10<br>-$9 for 15<br> 
+          For drinks, tall taps are $3
+        </td>
+        <!-- Thursday -->
+        <td>
+          $2 rails, $3 call drinks and half-off signature drinks. Shakin' Bacon 
+          games all day!
+        </td>
+        <!-- Friday -->
+        <td>
+          Large any-topping pizza to go for $10.99
+        </td>
+        <!-- Saturday -->
+        <td>
+          Large 1-topping pizza with an order of wings for $20.99 to go
+        </td>
+        <!-- Sunday -->
+        <td>
+          Half off on appetizers, rail drinks, call drinks, bottled beer, tap beer, 
+          and more!
+        </td>
       </tr>
     </tfoot>
+    <tbody>
+      <tr>
+        <td><h3>Burger Monday</h3></td>
+        <td><h3>Medium Pizza Special</h3></td>
+        <td><h3>Wing Wednesday</h3></td>
+        <td><h3>Call & Speciality Drinks</h3></td>
+        <td><h3>Pizza To Go</h3></td>
+        <td><h3>Pizza & Wings To Go</h3></td>
+        <td><h3>Halfy Hour All Day</h3></td>
+      </tr>
+    </tbody>
   </table>
 </div>

@@ -132,5 +132,10 @@ class CarouselController {
     slideTimer.cancel();
   }
   
-  bool isfirstslide(slide) => slides.indexOf(slide) == 0;
+//  bool isfirstslide(slide) => slides.indexOf(slide) == 0;
+  // TODO: isfirstslide func runs far too many times!
+  bool isfirstslide(slide) {
+//    _log.fine("Running ng-class first slide check...");
+    return slides.indexOf(slide) == 0;
+  }
 }

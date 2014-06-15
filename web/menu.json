@@ -129,5 +129,80 @@
         "cost": 10
       }
     ]
+  },
+  {
+    "name": "Flatbreads",
+    "items": [
+      {
+        "name": "Pulled Pork",
+        "desc": "House roasted pork shoulder, soy ginger marinade, fresh apple slices, and cabbage slaw tossed in spicy red pepper sesame sauce",
+        "cost": 12
+      },
+      {
+        "name": "Southwest Chicken",
+        "desc": "Grilled adobo chicken, kale, black bean corn salsa, and cheddar cheese",
+        "cost": 11
+      },
+      {
+        "name": "Peach & Gorgonzola",
+        "desc": "Fresh kale, toasted almonds, gorgonzola cheese, and drunken peaches topped with shaved white chocolate and a sweet and spicey honey chipotle vinaigrette",
+        "cost": 12
+      }
+    ]
+  },
+  {
+    "name": "Sandwiches",
+    "items": [
+      {
+        "name": "Hickory Maple Pork",
+        "desc": "Our house roasted pork shoulder, maple BBQ sauce, bacon, kale, and carmelized onions on grilled sourdough",
+        "cost": 9
+      },
+      {
+        "name": "PBLT",
+        "desc": "A BLT on PEDs.  Seared pork belly, crispy bacon, lettuce, tomato, and spicy red pepper mayo",
+        "cost": 10
+      },
+      {
+        "name": "1987",
+        "desc": "An American classic done Bug Eyed! Fried bologna, carmelized onions, dark ale whole grain mustard and American cheese on grilled sourdough bread",
+        "cost": 8
+      },
+      {
+        "name": "Brie Chicken Sandwich",
+        "desc": "Grilled chicken, brie, fresh apples, carmelized onions, and spicy mayo on our handsome brioche bun",
+        "cost": 10
+      },
+      {
+        "name": "Fish Tacos",
+        "desc": "Deep fried beer-battered mahi mahi, kale salad and spicy sriracha aioli on warm flour tortillas",
+        "cost": 9
+      },
+      {
+        "name": "Braised Beef Tacos",
+        "desc": "Beer braised beef with a sesame ginger sauce, shredded vegetables, and red pepper mayo on flour tortillas",
+        "cost": 9
+      },
+      {
+        "name": "Buffalo Chicken Wrap",
+        "desc": "Our marinated grilled chicken, buffalo sauce, jalapeño bacon cream cheese, lettuce, and black bean corn salsa wrapped in a flour tortilla",
+        "cost": 9
+      },
+      {
+        "name": "Half Moon Over Cuba",
+        "desc": "Pulled pork, bacon,  dark ale mustard, homemade pickles, and Swiss cheese on a grilled baguette",
+        "cost": 9
+      },
+      {
+        "name": "Saloon Steak Sandwich",
+        "desc": "Sauteed marinated steak, mushrooms and onions on a garlic-toasted baguette with melted Swiss cheese",
+        "cost": 9
+      },
+      {
+        "name": "Grilled Cheese",
+        "desc": "Parmesan crusted sourdough bread, cheddar cheese, Swiss cheese, peppered bacon, drunken peaches and a chipotle-honey vinaigrette",
+        "cost": 9
+      }
+    ]
   }
 ]

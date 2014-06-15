@@ -4,7 +4,7 @@ import 'dart:async';
 
 import 'package:angular/angular.dart';
 
-import 'package:bugeyedbettys/service/dish.dart';
+//import 'package:bugeyedbettys/service/dish.dart';
 
 @Injectable()
 class QueryService {
@@ -33,8 +33,8 @@ class QueryService {
             _menuCache.add(c);
             List<Map<String, dynamic>> dishes = category['items'];
             for (Map item in dishes) {
-              Dish d = new Dish.fromJson(item);
-              _menuCache.last['items'].add(d);
+//              Dish d = new Dish.fromJson(item);
+//              _menuCache.last['items'].add(d);
             }
           }
         });
